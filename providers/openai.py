@@ -3,7 +3,7 @@ import openai
 
 openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-def test():
+def main():
   response = openai_client.responses.create(
     model="gpt-5-nano",
     reasoning={
@@ -24,13 +24,14 @@ def test():
         "content": [
           {
             "type": "input_text",
-            "text": "Qual o sentido da vida?"
+            "text": input("Digite uma pergunta: ")
           }
         ]
       }
     ]
   )
   
-  return response
+  print(response.output_text)
+  return response.output_text
 
 
