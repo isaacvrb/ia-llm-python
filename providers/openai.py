@@ -31,7 +31,9 @@ def main():
     ]
   )
   
-  print(response.output_text)
-  return response.output_text
+  output_text = response.input_text
+  
+  print(output_text)
+  return output_text
 
 
