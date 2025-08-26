@@ -11,7 +11,7 @@ def main():
     messages=[
       {
         "role": "user",
-        "content": "Qual o significado do amor?"
+        "content": input("Digite uma pergunta: ")
       }
     ],
   )

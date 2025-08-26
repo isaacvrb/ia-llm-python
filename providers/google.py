@@ -1,7 +1,17 @@
 import os
-import google.generativeai as gai
+from google import genai
 
-gai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def main():
-  return True
+  response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    config=genai.types.GenerateContentConfig(
+      system_instruction="Seja direto e conciso, uma única frase como resposta."
+    ),
+    contents=input("Digite uma pergunta: "),
+  )
+  text = response.text
+  
+  print(text)
+  return text

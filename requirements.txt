@@ -2,7 +2,7 @@ python-dotenv
 
 openai
 anthropic
-google-generativeai
+google-genai
 xai-sdk
 groq
 ollama
