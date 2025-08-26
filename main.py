@@ -9,7 +9,9 @@ from providers import openai
 # from providers import groq
 # from providers import ollama
 
-openai.main()
+# openai.main()
+openai.book_finder()
+
 # anthropic.main()
 # xai.main()
 # google.main()

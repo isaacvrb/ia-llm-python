@@ -1,4 +1,5 @@
 python-dotenv
+pydantic
 
 openai
 anthropic
